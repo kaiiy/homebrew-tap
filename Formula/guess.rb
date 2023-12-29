@@ -5,7 +5,7 @@ class Guess < Formula
     desc "Guess the target word."
     homepage "https://github.com/kaiiy/guess/"
     url "https://github.com/kaiiy/guess/archive/refs/tags/v0.1.3.tar.gz"
-    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    sha256 "4a670fdb2c40388b317ad431f2b7bc530cdd269c130ffb5253b72556df0d546f"
     license "MIT"
   
     depends_on "deno"
