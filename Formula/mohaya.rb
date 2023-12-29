@@ -11,7 +11,7 @@ class Mohaya < Formula
   depends_on "deno"
 
   def install
-    bin.install "bin/mohaya"
+    bin.install "dist/mohaya"
   end
 
   test do
