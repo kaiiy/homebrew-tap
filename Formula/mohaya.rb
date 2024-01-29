@@ -4,8 +4,8 @@
 class Mohaya < Formula
   desc ""
   homepage "https://github.com/kaiiy/mohaya/"
-  url "https://github.com/kaiiy/mohaya/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "44e28c2081a22a45880e3626e95128321a52bc4dedb4e8896d24f5f87da72d12"
+  url "https://github.com/kaiiy/mohaya/archive/refs/tags/v0.3.1_1.tar.gz"
+  sha256 "856d0e83473e387f15eed1de68040ae1c2d1949a39bc2ed297bc1d66dacdd78e"
   license "MIT"
 
   depends_on "deno"
