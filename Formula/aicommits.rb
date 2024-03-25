@@ -1,8 +1,8 @@
 class Aicommits < Formula
     desc ""
     homepage "https://github.com/kaiiy/aicommits/"
-    url "https://github.com/kaiiy/aicommits/archive/refs/tags/v2.0.0.tar.gz"
-    sha256 "43560a3e0dbe68f32ee9b0abc2a44a1fbdf0ca6f8128ca91884772d52d85db11"
+    url "https://github.com/kaiiy/aicommits/archive/refs/tags/v2.0.1.tar.gz"
+    sha256 "0cbbdabd8628fd827dff8659d69bc9ab3d77c3e562314821a9d8e916393701e4"
     license "MIT"
   
     depends_on "deno"
