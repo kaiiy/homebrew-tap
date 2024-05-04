@@ -1,0 +1,41 @@
+# Thanks: https://github.com/uzimaru0000/homebrew-tap/blob/master/.github/workflows/update.yml
+
+name: Update Homebrew Formula
+
+permissions:
+  contents: write
+
+on:
+  repository_dispatch:
+    types: [update-brew]
+  workflow_dispatch:
+    inputs:
+      formula:
+        description: "formula"
+        required: true
+        default: ""
+      sha256:
+        description: "checksum"
+        required: true
+        default: ""
+      url:
+        description: "url"
+        required: true
+        default: ""
+
+jobs:
+  update-brew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update Formula
+        run: |
+          FORMULA="${{ github.event.inputs.formula }}"
+          SHA256="${{ github.event.inputs.sha256 }}"
+          URL="${{ github.event.inputs.url }}"
+          sed -i "s|url \"[^\"]*\"|url \"$URL\"|" ./Formula/$FORMULA.rb
+          sed -i "s|sha256 \"[^\"]*\"|sha256 \"$SHA256\"|" ./Formula/$FORMULA.rb
+
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5
