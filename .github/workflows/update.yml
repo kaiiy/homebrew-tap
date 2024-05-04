@@ -8,20 +8,6 @@ permissions:
 on:
   repository_dispatch:
     types: [update-brew]
-  workflow_dispatch:
-    inputs:
-      formula:
-        description: "formula"
-        required: true
-        default: ""
-      sha256:
-        description: "checksum"
-        required: true
-        default: ""
-      url:
-        description: "url"
-        required: true
-        default: ""
 
 jobs:
   update-brew:
@@ -31,9 +17,9 @@ jobs:
 
       - name: Update Formula
         run: |
-          FORMULA="${{ github.event.inputs.formula }}"
-          SHA256="${{ github.event.inputs.sha256 }}"
-          URL="${{ github.event.inputs.url }}"
+          FORMULA="${{ github.event.client_payload.formula }}"
+          SHA256="${{ github.event.client_payload.sha256 }}"
+          URL="${{ github.event.client_payload.url }}"
           sed -i "s|url \"[^\"]*\"|url \"$URL\"|" ./Formula/$FORMULA.rb
           sed -i "s|sha256 \"[^\"]*\"|sha256 \"$SHA256\"|" ./Formula/$FORMULA.rb
 
