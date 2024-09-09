@@ -5,9 +5,8 @@ class GhClone < Formula
     sha256 "770176b079adc3adc0f2f50d4b6ae494b3d8c00ac82b872e46e6373656063e9a"
     license "MIT"
   
-    depends_on "deno"
-  
     def install
+      system "deno", "clean" 
       bin.install "bin/gh-clone"
     end
   
