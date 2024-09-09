@@ -6,7 +6,6 @@ class GhClone < Formula
     license "MIT"
   
     def install
-      system "deno", "clean" 
       bin.install "bin/gh-clone"
     end
   
