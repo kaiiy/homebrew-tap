@@ -1,8 +1,8 @@
 class GhClone < Formula
     desc ""
     homepage "https://github.com/kaiiy/gh-clone/"
-    url "https://github.com/kaiiy/gh-clone/archive/refs/tags/v0.1.3.tar.gz"
-    sha256 "770176b079adc3adc0f2f50d4b6ae494b3d8c00ac82b872e46e6373656063e9a"
+    url "https://github.com/kaiiy/gh-clone/archive/refs/tags/v0.1.3_1.tar.gz"
+    sha256 "ed54df5997c50aac81af33157db1e14837ed7b96a280849fa4a79fa6de1806ab"
     license "MIT"
 
     depends_on "deno"
